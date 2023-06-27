@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>Adilet Baimyrza | Portfolio</title>
-</head>
-<body>
-    <header class="header">
-        <h1 class="header_name">Adilet Baimyrza</h1>
-        <div class="header_navbar">
-            <a class="header_navbar_link" href="{{ url_for('home') }}">Projects</a>
-            <a class="header_navbar_link" href="{{ url_for('about') }}">About</a>
-            <a class="header_navbar_link" href="{{ url_for('contact') }}">Contact</a>
-        </div>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <title>Adilet Baimyrza | Portfolio</title>
+    </head>
 
-    {% block content %}
-    <!--content-->
-    {% endblock content %}
-</body>
+    <body>
+        <header class="header">
+            <h1 class="header_name">Adilet Baimyrza</h1>
+            <div class="header_navbar">
+                <a
+                class="header_navbar_link {{ header_navbar_link-active if request.path == url_for('home') }}" 
+                href="{{ url_for('home') }}"
+                >Projects</a>
+                <a class="header_navbar_link {{ header_navbar_link-active if request.path == url_for('about') }}"
+                href="{{ url_for('about') }}"
+                >About</a>
+                <a class="header_navbar_link {{ header_navbar_link-active if request.path == url_for('contact') }}"
+                href="{{ url_for('contact') }}"
+                >Contact</a>
+            </div>
+        </header>
+
+        {% block content %}
+        <!--content-->
+        {% endblock content %}
+    </body>
 </html>
