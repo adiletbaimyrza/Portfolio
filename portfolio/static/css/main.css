@@ -9,3 +9,156 @@
 html {
     font-family: "Lato", "sans-serif";
 }
+
+body {
+    margin-top: 80px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header_navbar {
+    display: flex;
+    flex-direction: row;
+    max-width: 300px;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    justify-content: space-around;
+    margin: 0rem auto 3rem auto;
+}
+
+.header_navbar_link {
+    text-decoration: none;
+    color: inherit;
+    transition: font-weight 0.3s ease;
+}
+
+.header_navbar_link-active,
+.header_navbar_link:hover {
+    font-weight: bold;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0.2rem;
+    
+}
+
+.main_about {
+    line-height: 150%;
+}
+
+.contact_li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.contact_list {
+    padding: 0 5px;
+}
+
+.contact_li_details {
+    margin-left: 1ch;
+}
+
+.contact_li_details_link {
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 2px 0 0 rgb(52, 174, 245);
+    transition: color 0.3s ease;
+}
+
+.contact_li_details_link:hover {
+    color: rgb(52, 174, 245);
+}
+
+.u-bare-link {
+    text-decoration: none;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1.25rem;
+    justify-content: center;
+    justify-items: center;
+    max-width: 21.875rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 48.75em) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 45rem;
+    }
+}
+
+@media (min-width: 70em) {
+    .projects {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 68rem;
+    }
+}
+  
+  .project_card {
+    padding: 0.75rem 0;
+  }
+  
+  .project_card_image {
+    max-width: 100%;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .project_card_meta {
+    padding: 0 1.25rem;
+  }
+  
+  .project_card_name {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    color: #1c2023;
+  }
+  
+  .project_card:hover .project_card_image {
+    transform: translateY(-0.5rem);
+  }
+  
+  .project_card:hover .project_card_name {
+    text-decoration: underline;
+  }
+  
+  .categories {
+    display: flex;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    color: #3d84a3;
+    list-style: none;
+    line-height: 1.45;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    letter-spacing: 0.075rem;
+  }
+  
+  /* Adds an ::after pseudo-element to each category tag, except the last one.
+     This psuedo-element contains a pipe character (|), which acts as a seperator
+     between the tags. */
+  
+  .categories_tag:not(:last-of-type)::after {
+    content: "|";
+    margin: 0 0.25rem;
+  }
+  
+
+
+  
+  /* Utility class to remove link styles */
+  .u-bare-link {
+    text-decoration: none;
+  }
