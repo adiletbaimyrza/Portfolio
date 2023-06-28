@@ -77,10 +77,6 @@ body {
     color: rgb(52, 174, 245);
 }
 
-.u-bare-link {
-    text-decoration: none;
-}
-
 .projects {
     display: grid;
     grid-template-columns: 1fr;
@@ -104,37 +100,37 @@ body {
         max-width: 68rem;
     }
 }
-  
-  .project_card {
+
+.project_card {
     padding: 0.75rem 0;
-  }
-  
-  .project_card_image {
+}
+
+.project_card_image {
     max-width: 100%;
     margin-bottom: 1rem;
     transition: transform 0.2s ease-in-out;
-  }
-  
-  .project_card_meta {
+}
+
+.project_card_meta {
     padding: 0 1.25rem;
-  }
-  
-  .project_card_name {
+}
+
+.project_card_name {
     margin: 0;
     font-size: 1.5rem;
     line-height: 2.25rem;
     color: #1c2023;
-  }
-  
-  .project_card:hover .project_card_image {
+}
+
+.project_card:hover .project_card_image {
     transform: translateY(-0.5rem);
-  }
-  
-  .project_card:hover .project_card_name {
+}
+
+.project_card:hover .project_card_name {
     text-decoration: underline;
-  }
-  
-  .categories {
+}
+
+.categories {
     display: flex;
     padding: 0;
     margin: 0 0 0.75rem;
@@ -144,21 +140,13 @@ body {
     text-transform: uppercase;
     font-size: 1.1rem;
     letter-spacing: 0.075rem;
-  }
-  
-  /* Adds an ::after pseudo-element to each category tag, except the last one.
-     This psuedo-element contains a pipe character (|), which acts as a seperator
-     between the tags. */
-  
-  .categories_tag:not(:last-of-type)::after {
+}
+
+.categories_tag:not(:last-of-type)::after {
     content: "|";
     margin: 0 0.25rem;
-  }
-  
+}
 
-
-  
-  /* Utility class to remove link styles */
-  .u-bare-link {
+.u-bare-link {
     text-decoration: none;
-  }
+}
