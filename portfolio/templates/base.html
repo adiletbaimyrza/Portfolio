@@ -7,55 +7,45 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-        {% block head_content %} {% endblock head_content %}
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        >
 
         <title>Adilet Baimyrza | Portfolio</title>
+
+        {% block head_content %} {% endblock head_content %}
     </head>
 
     <body>
         <header class="header">
-            <div class="header_navbar {{ 'add-margin-bottom-100px' if request.path != url_for('about') }}">
-                <a
-                class="header_navbar_link logo {{ 'header_navbar_link-active' if request.path == url_for('home') }}" 
-                href="{{ url_for('home') }}"
-                ><span id="at">@</span>adiletBaimyrza</a>
+            <div class="header-navbar {{ 'add-margin-bottom-100px' if request.path != url_for('about') }}">
+                <a class="header-navbar-link logo" href="{{ url_for('home') }}">
+                    <span id="at">@</span>adiletBaimyrza
+                </a>
                 <div class="nav">
-                    <a
-                    class="header_navbar_link {{ 'header_navbar_link-active' if request.path == url_for('home') }}" 
-                    href="{{ url_for('home') }}"
-                    >Projects</a>
-                    <a class="header_navbar_link {{ 'header_navbar_link-active' if request.path == url_for('about') }}"
-                    href="{{ url_for('about') }}"
-                    >About</a>
-                    <a class="header_navbar_link {{ 'header_navbar_link-active' if request.path == url_for('contact') }}"
-                    href="{{ url_for('contact') }}"
-                    >Contact</a>
+                    <a class="header-navbar-link" href="{{ url_for('home') }}">Projects</a>
+                    <a class="header-navbar-link" href="{{ url_for('about') }}">About</a>
+                    <a class="header-navbar-link" href="{{ url_for('contact') }}">Contact</a>
 
-                    <a
-                        class="header_navbar_link"
-                        href="{{ url_for('toggle_theme', current_page=request.path) }}"
-                    >
-                        <span class="nav_item">
+                    <a class="header-navbar-link" href="{{ url_for('toggle_theme', current_page=request.path) }}">
                             {% if session.get("theme") == "dark" %}
-                                {{ sun('nav_icon sun')}}
+                                {{ sun('nav-icon')}}
                             {% else %}
-                                {{ moon('nav_icon moon')}}
+                                {{ moon('nav-icon')}}
                             {% endif %}
-                        </span>
                     </a>
                 </div>
             </div>
+
             {% if request.path == url_for('about') %}
                 {{ hello() }}
             {% endif %}
         </header>
 
-        {% block content %}
-        <!--content-->
-        {% endblock content %}
+        {% block content %} {% endblock content %}
     </body>
 </html>
