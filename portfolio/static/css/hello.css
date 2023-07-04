@@ -1,0 +1,48 @@
+.hello-container {
+    display: flex;
+    justify-content: center;
+    }
+    
+    .hello {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 550px;
+    }
+    
+    .hello-photo-container {
+    height: 20rem;
+    width: 20rem;
+    margin-left: 100px;
+    }
+    
+    .hello-photo {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: solid 5px black;
+    margin-right: 50px;
+    }
+    
+    .name-motto-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 30px;
+    }
+    
+    .name {
+    font-size: 4rem;
+    margin: 0;
+    margin-bottom: 20px;
+    }
+    
+    .motto {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 20px;
+    }
