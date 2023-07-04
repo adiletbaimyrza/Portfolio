@@ -1,0 +1,27 @@
+.about {
+    display: flex;
+    height: 550px;
+    margin: 0 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about-text-container {
+    flex-basis: 50%;
+}
+
+.about-photo-container {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-paragraph {
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+.about-photo {
+    height: 30rem;
+    width: 30rem;
+}

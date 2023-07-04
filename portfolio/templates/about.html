@@ -2,18 +2,53 @@
 
 {% block head_content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hello.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
 {% endblock head_content %}
 
 
 {% block content %}
 <main class="main main_about">
-    <p class main_about_paragraph>
-        Hello everyone! As I prepare to start my final year at the University of Lodz,
-        I am actively seeking entry-level Software Engineering positions.
-        Currently, I am working on personal projects, primarily using C++ and Python.
-        Aside from programming, I am also gearing up for the upcoming Autumn marathons season in Poland.
-        I approach both of my passions, running and coding, with the same concepts of agility,
-        adaptability, and ongoing self-improvement.
-    </p>
+    <div class="about">
+        <div class="about-text-container">
+            <h1 class="about-header">About me</h1>
+            <p class="about-paragraph">
+                Hello everyone!
+            </p>
+            <p class="about-paragraph">
+                As I prepare to start my final year at the University of Lodz,
+                I am actively seeking entry-level Software Engineering positions.
+                Currently, I am working on personal projects, primarily using C++ and Python.
+                Aside from programming, I am also gearing up for the upcoming Autumn marathons season in Poland.
+            </p>
+            <p class="about-paragraph">
+                I approach both of my passions, running and coding, with the same concepts of agility,
+                adaptability, and ongoing self-improvement.
+            </p>
+        </div>
+        <div class="about-photo-container">
+            <img src="{{ url_for('static', filename='img/about-photo.png') }}" class="about-photo">
+        </div>
+    </div>
+    <div class="about">
+        <div class="about-text-container">
+            <h1 class="about-header">About me</h1>
+            <p class="about-paragraph">
+                Hello everyone!
+            </p>
+            <p class="about-paragraph">
+                As I prepare to start my final year at the University of Lodz,
+                I am actively seeking entry-level Software Engineering positions.
+                Currently, I am working on personal projects, primarily using C++ and Python.
+                Aside from programming, I am also gearing up for the upcoming Autumn marathons season in Poland.
+            </p>
+            <p class="about-paragraph">
+                I approach both of my passions, running and coding, with the same concepts of agility,
+                adaptability, and ongoing self-improvement.
+            </p>
+        </div>
+        <div class="about-photo-container">
+            <img src="{{ url_for('static', filename='img/about-photo.png') }}" class="about-photo">
+        </div>
+    </div>
 </main>
 {% endblock content %}
