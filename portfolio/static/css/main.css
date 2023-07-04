@@ -48,7 +48,7 @@ padding: 0.2rem;
 line-height: 150%;
 }
 
-.contact_li {
+.contact-li {
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -56,22 +56,22 @@ padding: 5px;
 font-size: 1.2rem;
 }
 
-.contact_list {
+.contact-list {
 padding: 0 5px;
 }
 
-.contact_li_details {
+.contact-li-details {
 margin-left: 1ch;
 }
 
-.contact_li_details_link {
+.contact-li-details_link {
 text-decoration: none;
 color: inherit;
 box-shadow: 0 2px 0 0 var(--accent-color);
 transition: color 0.3s ease;
 }
 
-.contact_li_details_link:hover {
+.contact-li-details-link:hover {
 color: var(--accent-color-2);
 }
 
