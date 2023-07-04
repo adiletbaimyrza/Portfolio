@@ -1,0 +1,13 @@
+{% macro hello() %}
+<div class="header-hello-container">
+    <div class="header-hello">
+        <div class="face-photo-container">
+            <img class="face-photo" src="{{ url_for('static', filename='img/face_photo.png') }}">
+        </div>
+        <div class="name-motto-container">
+            <h1 class="header_name">Hi, I am Adilet</h1>
+            <p class="header-motto">I <span class="accent">build</span> things for Web using <span class="accent">Python</span></p>
+        </div>
+    </div>
+</div>
+{% endmacro%}

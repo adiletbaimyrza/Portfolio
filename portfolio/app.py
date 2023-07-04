@@ -1,8 +1,13 @@
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, session, request, redirect
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def create_app():
     app = Flask(__name__)
-
+    app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+    
     projects = [
         {
             "name": "Habit tracking app with Python and MongoDB",
@@ -54,6 +59,17 @@ def create_app():
     @app.errorhandler(404)
     def page_not_found(error):
         return render_template("404.html"), 404
+
+    @app.get("/toggle-theme")
+    def toggle_theme():
+        current_theme = session.get("theme")
+        
+        if current_theme == "dark":
+            session["theme"] = "light"
+        else:
+            session["theme"] = "dark"
+            
+        return redirect(request.args.get("current_page"))
     
     return app
 
