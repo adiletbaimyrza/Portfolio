@@ -1,0 +1,47 @@
+/* Create a grid layout with three columns */
+.main-contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 450px;
+  }
+  
+  /* Style for each contact list item */
+  .contact-li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .contact-li-container {
+    height: 80%;
+    background-color: rgb(54, 63, 71);
+    min-width: 80%;
+    transition: ease-in-out 0.5s;
+    border-radius: 5%;
+  }
+
+  .contact-li-container:hover {
+    height: 100%;
+    background-color: aliceblue;
+    min-width: 100%;
+  }
+  
+  .contact-li-name {
+    font-weight: bold;
+  }
+  
+  .contact-li-details {
+    margin-top: 10px;
+  }
+  
+  .contact-li-details-link {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  .contact-li-details-link:hover {
+    text-decoration: underline;
+  }
+  

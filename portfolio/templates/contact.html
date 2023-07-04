@@ -1,32 +1,40 @@
 {% extends "base.html" %}
 
+{% block head_content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock head_content %}
+
 {% block content %}
-<main class="main main_contact">
-    <dl class="contact_list">
-        <div class="contact_li">
-            <dt class="contact_li_name">email:</dt>
-            <dd class="contact_li_details">
-                <a class="contact_li_details_link" href="mailto:adiletbaimyrza@gmail.com" target="_blank">
-                    adiletbaimyrza@gmail.com
-                </a>
-            </dd>
+<main class="main main-contact">
+        <div class="contact-li">
+            <a class="contact-li-container" href="#">
+                <div class="contact-li-name">email:</div>
+                <div class="contact-li-details">
+                    <div class="contact-li-details_link">
+                        adiletbaimyrza@gmail.com
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="contact_li">
-            <dt class="contact_li_name">linkedin:</dt>
-            <dd class="contact_li_details">
-                <a class="contact_li_details_link" href="https://www.linkedin.com/in/adiletbaim/" target="_blank">
-                    Adilet Baimyrza
-                </a>
-            </dd>
+        <div class="contact-li">
+            <a class="contact-li-container" href="#">
+                <div class="contact-li-name">linkedin:</div>
+                <div class="contact-li_details">
+                    <div class="contact-li-details_link">
+                        Adilet Baimyrza
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="contact_li">
-            <dt class="contact_li_name">github:</dt>
-            <dd class="contact_li_details">
-                <a class="contact_li_details_link" href="https://github.com/AdiletBaimyrza" target="_blank">
-                    @AdiletBaimyrza
-                </a>
-            </dd>
+        <div class="contact-li">
+            <a class="contact-li-container" href="#">
+                <div class="contact-li-name">github:</div>
+                <div class="contact-li-details">
+                    <div class="contact-li-details_link">
+                        @AdiletBaimyrza
+                    </div>
+                </div>
+            </a>
         </div>
-    </dl>
 </main>
 {% endblock content %}
