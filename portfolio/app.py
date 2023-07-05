@@ -1,4 +1,4 @@
-from flask import Flask, render_template, abort, session, request, redirect
+from flask import Flask, render_template, abort, session, request, redirect, url_for
 import os
 from dotenv import load_dotenv
 
@@ -8,7 +8,7 @@ def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
     
-    projects = [
+    projects_info = [
         {
             "name": "Habit tracking app with Python and MongoDB",
             "thumb": "img/habit-tracking.png",
@@ -35,11 +35,15 @@ def create_app():
         },
     ]
 
-    slug_to_project = {project["slug"]: project for project in projects}
+    slug_to_project = {project["slug"]: project for project in projects_info}
 
     @app.route("/")
     def home():
-        return render_template("home.html", projects=projects)
+        return redirect(url_for("about"))
+    
+    @app.route("/projects")
+    def projects():
+        return render_template("home.html", projects=projects_info)
 
     @app.route("/about")
     def about():

@@ -23,12 +23,13 @@
     <body>
         <header class="header">
             <div class="header-navbar {{ 'add-margin-bottom-100px' if request.path != url_for('about') }}">
-                <a class="header-navbar-link logo" href="{{ url_for('home') }}">
+                <a class="header-navbar-link logo" href="{{ url_for('about') }}">
                     <span id="at">@</span>adiletBaimyrza
                 </a>
                 <div class="nav">
-                    <a class="header-navbar-link" href="{{ url_for('home') }}">Projects</a>
+                    <a class="header-navbar-link" href="{{ url_for('projects') }}">Projects</a>
                     <a class="header-navbar-link" href="{{ url_for('about') }}">About</a>
+                    <a class="header-navbar-link" href="https://github.com/AdiletBaimyrza" target="_blank">Github</a>
                     <a class="header-navbar-link" href="{{ url_for('contact') }}">Contact</a>
 
                     <a class="header-navbar-link" href="{{ url_for('toggle_theme', current_page=request.path) }}">

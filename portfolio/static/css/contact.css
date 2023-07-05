@@ -1,47 +1,67 @@
-/* Create a grid layout with three columns */
 .main-contact {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 450px;
-  }
-  
-  /* Style for each contact list item */
-  .contact-li {
+}
+
+.contact-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-  }
+    padding: 30px 10px 10px 10px;
+}
 
-  .contact-li-container {
+.contact {
     height: 80%;
     background-color: rgb(54, 63, 71);
     min-width: 80%;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.8s;
     border-radius: 5%;
-  }
+}
 
-  .contact-li-container:hover {
-    height: 100%;
+.gmail {
+    background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/gmail.png');
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover; 
+}
+
+.linkedin {
+    background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/linkedin.png');
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+
+.linkedin:hover {
+    background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/linkedin.png');
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover; 
+}
+
+.github {
+    background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/github.png');
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover; 
+}
+
+.contact:hover {
+    height: 90%;
     background-color: aliceblue;
-    min-width: 100%;
-  }
-  
-  .contact-li-name {
+    min-width: 90%;
+}
+
+.contact-desc {
     font-weight: bold;
-  }
-  
-  .contact-li-details {
-    margin-top: 10px;
-  }
-  
-  .contact-li-details-link {
-    color: blue;
-    text-decoration: none;
-  }
-  
-  .contact-li-details-link:hover {
-    text-decoration: underline;
-  }
-  
+}
