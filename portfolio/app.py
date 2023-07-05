@@ -49,9 +49,26 @@ def create_app():
     def about():
         return render_template("about.html")
 
-    @app.route("/contact")
+    @app.route('/contact')
     def contact():
-        return render_template("contact.html")
+        contact_details = [
+            {
+                "desc": "adiletbaimyrza@gmail.com",
+                "class": "gmail",
+                "link": "mailto:adiletbaimyrza@gmail.com"
+            },
+            {
+                "desc": "Adilet Baimyrza",
+                "class": "linkedin",
+                "link": "https://www.linkedin.com/in/adiletbaim/"
+            },
+            {
+                "desc": "@adiletBaimyrza",
+                "class": "github",
+                "link": "https://github.com/AdiletBaimyrza"
+            }
+        ]
+        return render_template('contact.html', contact_details=contact_details)
 
     @app.route("/project/<string:slug>")
     def project(slug):

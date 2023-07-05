@@ -1,7 +1,7 @@
 .main-contact {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 450px;
+    height: 100%;
 }
 
 .contact-container {
@@ -9,7 +9,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px 10px 10px 10px;
+    padding: 0 10px;
+    height: 450px;            /* to change in larger and smaller screens*/
 }
 
 .contact {
@@ -22,33 +23,19 @@
 
 .gmail {
     background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/gmail.png');
-    width: 80%;
-    height: 80%;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover; 
 }
 
 .linkedin {
     background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/linkedin.png');
-    width: 80%;
-    height: 80%;
-    background-repeat: no-repeat;
-    background-position: center; 
-    background-size: cover;
-}
-
-.linkedin:hover {
-    background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/linkedin.png');
-    width: 80%;
-    height: 80%;
-    background-repeat: no-repeat; 
-    background-position: center; 
-    background-size: cover; 
 }
 
 .github {
     background:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/github.png');
+}
+
+.gmail,
+.linkedin,
+.github {
     width: 80%;
     height: 80%;
     background-repeat: no-repeat;

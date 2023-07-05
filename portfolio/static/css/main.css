@@ -28,10 +28,12 @@ html {
     background-color: var(--background-color);
     color: var(--text-color);
     font-size: 16px;
+    height: 100%;
 }
 
 body {
     margin-top: 20px;
+    height: 100%;
 }
 
 .u-accent {
@@ -42,6 +44,7 @@ color: var(--accent-color);
 max-width: 100%;
 margin: 0 auto;
 padding: 0.2rem;
+height: 100%;
 }
 
 .main_about {

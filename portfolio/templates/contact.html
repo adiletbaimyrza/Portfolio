@@ -6,17 +6,11 @@
 
 {% block content %}
 <main class="main main-contact">
-        <div class="contact-container">
-            <p class="contact-desc">adiletbaimyrza@gmail.com</p>
-            <a class="contact gmail" href="mailto:adiletbaimyrza@gmail.com" target="_blank"></a>
-        </div>
-        <div class="contact-container">
-            <p class="contact-desc">Adilet Baimyrza</p>
-            <a class="contact linkedin" href="https://www.linkedin.com/in/adiletbaim/" target="_blank"></a>
-        </div>
-        <div class="contact-container">
-            <p class="contact-desc">@adiletBaimyrza</p>
-            <a class="contact github" href="https://github.com/AdiletBaimyrza" target="_blank"></a>
-        </div>
+    {% for contact in contact_details %}
+    <div class="contact-container">
+        <p class="contact-desc">{{ contact.desc }}</p>
+        <a class="contact {{ contact.class }}" href="{{ contact.link }}" target="_blank"></a>
+    </div>
+{% endfor %}
 </main>
 {% endblock content %}
