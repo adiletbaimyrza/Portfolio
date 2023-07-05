@@ -43,7 +43,7 @@ def create_app():
     
     @app.route("/projects")
     def projects():
-        return render_template("home.html", projects=projects_info)
+        return render_template("projects.html", projects=projects_info)
 
     @app.route("/about")
     def about():
