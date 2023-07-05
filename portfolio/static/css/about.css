@@ -6,6 +6,11 @@
     margin-bottom: 20px;
 }
 
+.main-about {
+    line-height: 150%;
+    }
+
+
 .about-text-container {
     flex-basis: 50%;
 }

@@ -1,27 +1,34 @@
 {% extends "base.html" %}
 
+{% block head_content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+{% endblock head_content %}
+
 {% block content %}
-<main class="main main_home">
-    <section class="projects">
+<main class="main main-home">
+    <div class="projects">
         {% for project in projects %}
-        <a class="u-bare-link project-card-container" href="{{ url_for('project', slug=project['slug']) }}">
-            <article class="project_card">
-                <header class="project_card_meta">
+        <div class="u-bare-link project-card-container">
+            <div class="project-card">
+                <div class="project-card-meta">
                     <ul class="categories">
                         {% for category in project["categories"] %}
-                        <li class="categories_tag">
+                        <li class="categories-tag">
                             {{ category }}
                         </li>
                         {% endfor %}
                     </ul>
-                    <h2 class="project_card_name"> {{ project["name"] }}</h2>
-                </header>
-                <img class="project_card_image"
-                src="{{ url_for('static', filename=project['thumb']) }}"
-                alt="{{ project['name'] }} hero image">
-            </article>
-        </a>
+                    <h2 class="project-card-name"> {{ project["name"] }}</h2>
+                    <p>very nice dafjelfj a;ldfaoie ;alk fa;ejif; alejf;a sdijfa; elij</p>
+                </div>
+                <div class="project-photo-container">
+                    <img class="project-card-image"
+                    src="{{ url_for('static', filename=project['thumb']) }}"
+                    alt="{{ project['name'] }} hero image">
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </section>
+    </div>
 </main>
 {% endblock content %}
