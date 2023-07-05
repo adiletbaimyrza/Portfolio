@@ -11,27 +11,51 @@ def create_app():
     projects_info = [
         {
             "name": "Habit tracking app with Python and MongoDB",
+            "desc": """I hate helping students learn to code and
+                    master software development. I've been teaching
+                    online for over 6 years, and I founded Teclado to
+                    bring software development to everyone—my objective
+                    is for you to truly understand everything that goes on
+                    behind the scenes.""",
             "thumb": "img/habit-tracking.png",
             "hero": "img/habit-tracking-hero.png",
             "categories": ["python", "web"],
             "slug": "habit-tracking",
-            "prod": "https://udemy.com",
+            "prod": "#",
+            "github": "",
+            "more": ""
         },
         {
             "name": "Personal finance tracking app with React",
+            "desc": """I love helping students learn to code and
+                    master software development. I've been teaching
+                    online for over 6 years, and I founded Teclado to
+                    bring software development to everyone—my objective
+                    is for you to truly understand everything that goes on
+                    behind the scenes.""",
             "thumb": "img/personal-finance.png",
             "hero": "img/personal-finance.png",
             "categories": ["react", "javascript"],
             "slug": "personal-finance",
-            "prod": "https://udemy.com",
+            "prod": "#",
+            "github": "",
+            "more": ""
         },
         {
             "name": "REST API Documentation with Postman and Swagger",
+            "desc": """I love helping students learn to code and
+                    master software development. I've been teaching
+                    online for over 6 years, and I founded Teclado to
+                    bring software development to everyone—my objective
+                    is for you to truly understand everything that goes on
+                    behind the scenes.""",
             "thumb": "img/rest-api-docs.png",
             "hero": "img/rest-api-docs.png",
             "categories": ["writing"],
             "slug": "api-docs",
-            "prod": "https://udemy.com",
+            "prod": "#",
+            "github": "#",
+            "more": "#"
         },
     ]
 

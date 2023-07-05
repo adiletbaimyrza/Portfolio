@@ -1,3 +1,5 @@
+{% from "macros/svgs.html" import github, website %}
+
 {% extends "base.html" %}
 
 {% block head_content %}
@@ -19,7 +21,16 @@
                         {% endfor %}
                     </ul>
                     <h2 class="project-card-name"> {{ project["name"] }}</h2>
-                    <p>very nice dafjelfj a;ldfaoie ;alk fa;ejif; alejf;a sdijfa; elij</p>
+                    <p class="project-desc">{{ project["desc"] }} <a href="{{ project['more'] }}" class="more">More...</a>
+                    </p>
+                    <div class="link-icons">
+                        <div class="link-icon-container">
+                            <a href="{{ project['github'] }}" >{{ github('link-icon') }}</a>
+                        </div>
+                        <div class="link-icon-container">
+                            <a href="{{ project['prod'] }}" >{{ website('link-icon') }}</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="project-photo-container">
                     <img class="project-card-image"

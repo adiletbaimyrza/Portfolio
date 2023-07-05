@@ -1,14 +1,16 @@
 :root {
+    --background-on-hover: #ebe8e8;
     --background-color: #fff;
     --text-color: #1c2023;
 
     --accent-color: rgb(61, 61, 221);
-    --accent-color-2: orange;
+    --accent-color-2: rgb(255, 123, 0);
     
     --toggle-theme-icon-color: rgb(61, 61, 221);
 }
 
 :root.dark-mode {
+    --background-on-hover: #222529;
     --background-color: #1c2023;
     --text-color: #fff;
     
