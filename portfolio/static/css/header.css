@@ -12,16 +12,12 @@
     text-align: center;
 }
     
-.add-margin-bottom-100px {
-    margin-bottom: 100px;
-}
-    
 .header-navbar-link {
     padding: 0 1em;
     text-decoration: none;
     color: inherit;
     transition: color 0.3s, border-bottom-color 0.3s;
-    border-bottom: 2px solid transparent;
+    border-bottom: 0.125rem solid transparent;
     font-size: 0.9em;
 }
     
@@ -40,13 +36,17 @@
 }
 
 .nav-item {
-font-weight: 800;
-letter-spacing: 1px;
-text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.06rem;
+    text-transform: uppercase;
 }
 
 .nav-icon {
 width: 1.5em;
 height: 1.5em;
 color: var(--toggle-theme-icon-color);
+}
+
+.u-add-mb-6-dot-25rem {
+    margin-bottom: 6.25rem;
 }

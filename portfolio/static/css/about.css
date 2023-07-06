@@ -1,9 +1,8 @@
 .about {
     display: flex;
-    height: 550px;
-    margin: 0 20px;
-    padding: 20px;
-    margin-bottom: 20px;
+    height: 35rem;
+    margin: 0 1.25rem 1.25rem 1.25rem;
+    padding: 1.25rem;
 }
 
 .main-about {
