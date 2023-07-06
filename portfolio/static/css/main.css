@@ -29,9 +29,39 @@ html {
     font-family: 'Inter', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    font-size: 16px;
     height: 100%;
 }
+
+@media (max-width: 575px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 991px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1201px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1601px) {
+    html {
+        font-size: 19px;
+    }
+}
+
 
 body {
     margin-top: 1.25rem;
@@ -39,7 +69,7 @@ body {
 }
 
 .u-accent {
-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 .main {
