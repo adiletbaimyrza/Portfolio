@@ -35,6 +35,22 @@
     font-weight: bolder;
 }
 
+@media screen and (max-width: 594px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .header-navbar-link {
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
 .nav-item {
     font-weight: 800;
     letter-spacing: 0.06rem;
@@ -47,6 +63,8 @@ height: 1.5em;
 color: var(--toggle-theme-icon-color);
 }
 
-.u-add-mb-6-dot-25rem {
-    margin-bottom: 6.25rem;
+@media screen and (min-width: 595px) {
+    .u-add-mb-6-dot-25rem {
+        margin-bottom: 6.25rem;
+    }
 }

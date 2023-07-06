@@ -32,33 +32,29 @@ html {
     height: 100%;
 }
 
-@media (max-width: 575px) {
+
+
+@media screen and (min-width: 1px) {
     html {
         font-size: 12px;
     }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
-    html {
-        font-size: 12px;
-    }
-}
-
-@media (min-width: 901px) and (max-width: 991px) {
+@media screen and (min-width: 750px) {
     html {
         font-size: 14px;
     }
 }
 
-@media (min-width: 1201px) {
+@media screen and (min-width: 1201px) {
     html {
         font-size: 16px;
     }
 }
 
-@media (min-width: 1601px) {
+@media screen and (min-width: 1601px) {
     html {
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 
