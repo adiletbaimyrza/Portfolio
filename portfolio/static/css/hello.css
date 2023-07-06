@@ -1,6 +1,7 @@
 .hello-container {
     display: flex;
     justify-content: center;
+    padding-bottom: 8rem;
 }
 
 .hello {
@@ -18,8 +19,8 @@
 }
 
 .hello-photo {
-    height: 100%;
-    width: 100%;
+    height: 18rem;
+    width: 18rem;
     border-radius: 50%;
     border: solid 0.3rem black;
     margin-right: 3.125rem;
@@ -45,4 +46,31 @@
     font-weight: bold;
     margin: 0;
     margin-bottom: 1.25rem;
+}
+
+@media screen and (max-width: 594px) {
+    .hello {
+        flex-direction: column;
+        align-items:flex-start;
+        height: auto;
+    }
+
+    .hello-photo-container {
+        width: 13rem;
+        height: 13rem;
+        margin-left: 1.5rem;
+    }
+
+    .hello-photo {
+        width: 12rem;
+        height:12rem;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .motto {
+        font-size: 2rem;
+    }
 }

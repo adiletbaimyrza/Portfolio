@@ -34,3 +34,15 @@
     height: 100%;
     width: 100%;
 }
+
+@media screen and (max-width: 594px) {
+    .about {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.about-photo-interior {
+    width: 26rem;
+    height: 26rem;
+}
