@@ -129,5 +129,7 @@
 
     .project-photo-container {
         margin: 0 1rem 12rem 1rem;
+        width: auto;
+        height: auto;
     }
 }

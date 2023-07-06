@@ -52,3 +52,11 @@
 .contact-desc {
     font-weight: bold;
 }
+
+
+@media screen and (max-width: 1100px) {
+    .main-contact {
+        display: flex;
+        flex-direction: column;
+    }
+}
