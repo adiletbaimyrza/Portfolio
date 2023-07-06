@@ -35,7 +35,7 @@
 
 .project-card-name {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 2.25rem;
     color: var(--text-color);
 }
@@ -83,7 +83,8 @@
 
 .project-desc {
     line-height: 2;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 400;
 }
 
 .project-photo-container {
