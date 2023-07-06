@@ -21,14 +21,14 @@
                         {% endfor %}
                     </ul>
                     <h2 class="project-card-name"> {{ project["name"] }}</h2>
-                    <p class="project-desc">{{ project["desc"] }} <a href="{{ project['more'] }}" class="more">More...</a>
+                    <p class="project-desc">{{ project["desc"] }}
                     </p>
                     <div class="link-icons">
                         <div class="link-icon-container">
-                            <a href="{{ project['github'] }}" >{{ github('link-icon') }}</a>
+                            <a href="{{ project['github'] }}" target="_blank">{{ github('link-icon') }}</a>
                         </div>
                         <div class="link-icon-container">
-                            <a href="{{ project['prod'] }}" >{{ website('link-icon') }}</a>
+                            <a href="{{ project['prod'] }}" target="_blank">{{ website('link-icon') }}</a>
                         </div>
                     </div>
                 </div>

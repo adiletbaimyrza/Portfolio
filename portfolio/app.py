@@ -10,20 +10,17 @@ def create_app():
     
     projects_info = [
         {
-            "name": "Habit tracking app with Python and MongoDB",
-            "desc": """I hate helping students learn to code and
-                    master software development. I've been teaching
-                    online for over 6 years, and I founded Teclado to
-                    bring software development to everyone—my objective
-                    is for you to truly understand everything that goes on
-                    behind the scenes.""",
-            "thumb": "img/habit-tracking.png",
+            "name": "Movie Watchlist WebApp",
+            "desc": """I am a Movie geek, so I built a secure and user-friendly web app using HTML,
+                    CSS, and Flask. Movie Watchlist allows you to effortlessly create and manage your
+                    personalized movie collection. Powered by MongoDB Cloud for personalized data storage
+                    and hosted on Heroku.""",
+            "thumb": "img/movie-watchlist-wall.png",
             "hero": "img/habit-tracking-hero.png",
-            "categories": ["python", "web"],
-            "slug": "habit-tracking",
-            "prod": "#",
-            "github": "",
-            "more": ""
+            "categories": ["flask", "css", "html", "mongodb"],
+            "slug": "movie-watchlist",
+            "prod": "https://movie-watchlist-by-adilet-b565458f53bd.herokuapp.com/login",
+            "github": "https://github.com/AdiletBaimyrza/movie-watchlist",
         },
         {
             "name": "Personal finance tracking app with React",
@@ -39,7 +36,6 @@ def create_app():
             "slug": "personal-finance",
             "prod": "#",
             "github": "",
-            "more": ""
         },
         {
             "name": "REST API Documentation with Postman and Swagger",
@@ -55,7 +51,6 @@ def create_app():
             "slug": "api-docs",
             "prod": "#",
             "github": "#",
-            "more": "#"
         },
     ]
 
