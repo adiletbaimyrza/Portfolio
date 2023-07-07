@@ -75,13 +75,6 @@ def create_app():
         ]
         return render_template('contact.html', contact_details=contact_details)
 
-    @app.route("/project/<string:slug>")
-    def project(slug):
-        if slug not in slug_to_project:
-            abort(404)
-        
-        return render_template(f'project_{slug}.html', project=slug_to_project[slug])
-
     @app.errorhandler(404)
     def page_not_found(error):
         return render_template("404.html"), 404
