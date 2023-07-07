@@ -16,45 +16,31 @@ def create_app():
                     personalized movie collection. Powered by MongoDB Cloud for personalized data storage
                     and hosted on Heroku.""",
             "thumb": "img/movie-watchlist-wall.png",
-            "hero": "img/habit-tracking-hero.png",
-            "categories": ["flask", "css", "html", "mongodb"],
-            "slug": "movie-watchlist",
+            "categories": ["python", "css", "html", "mongodb"],
             "prod": "https://movie-watchlist-by-adilet-b565458f53bd.herokuapp.com/login",
             "github": "https://github.com/AdiletBaimyrza/movie-watchlist",
         },
         {
-            "name": "Personal finance tracking app with React",
-            "desc": """I love helping students learn to code and
-                    master software development. I've been teaching
-                    online for over 6 years, and I founded Teclado to
-                    bring software development to everyone—my objective
-                    is for you to truly understand everything that goes on
-                    behind the scenes.""",
-            "thumb": "img/personal-finance.png",
-            "hero": "img/personal-finance.png",
-            "categories": ["react", "javascript"],
-            "slug": "personal-finance",
-            "prod": "#",
-            "github": "",
+            "name": "Lyft Back-End Engineering Virtual Experience Program",
+            "desc": """At this Virtual Experience Program, I refactored the codebase by the design
+                    given by engineers, added a new parameter for car servicing and wrote unit tests for it
+                    while following SOLID principles.""",
+            "thumb": "img/lyft-logo.png",
+            "categories": ["python", "unittests", "software design"],
+            "prod": "https://www.theforage.com/virtual-internships/prototype/xSw9echtixLAoPdsH/Lyft-Back-End-Engineering-Virtual-Experience-Program",
+            "github": "https://github.com/AdiletBaimyrza/forage-lyft-starter-repo",
         },
         {
-            "name": "REST API Documentation with Postman and Swagger",
-            "desc": """I love helping students learn to code and
-                    master software development. I've been teaching
-                    online for over 6 years, and I founded Teclado to
-                    bring software development to everyone—my objective
-                    is for you to truly understand everything that goes on
-                    behind the scenes.""",
-            "thumb": "img/rest-api-docs.png",
-            "hero": "img/rest-api-docs.png",
-            "categories": ["writing"],
-            "slug": "api-docs",
+            "name": "Team Project - Telegram Bot",
+            "desc": """Led a group of three students in the development of a Telegram-bot
+            that could generate graphs of mathematical functions based on functions given
+            as strings and manipulate them with various commands. This project was the part of Software Engineering Course.""",
+            "thumb": "img/bot.png",
+            "categories": ["python", "numpy", "matplotlib", "telegram-api"],
             "prod": "#",
-            "github": "#",
+            "github": "https://github.com/AdiletBaimyrza/FunctionPlotterBot",
         },
     ]
-
-    slug_to_project = {project["slug"]: project for project in projects_info}
 
     @app.route("/")
     def home():
