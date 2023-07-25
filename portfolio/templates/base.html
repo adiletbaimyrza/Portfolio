@@ -41,7 +41,7 @@
                     <a class="header-navbar-link" href="{{ url_for('projects') }}">Projects</a>
                     <a class="header-navbar-link" href="{{ url_for('about') }}">About</a>
                     <a class="header-navbar-link" href="https://github.com/AdiletBaimyrza" target="_blank">Github</a>
-                    <a class="header-navbar-link" href="{{ url_for('contact') }}">Contact</a>
+                    <a class="header-navbar-link" href="{{ url_for('bookshelf') }}">Bookshelf</a>
 
                     <a class="header-navbar-link" href="{{ url_for('toggle_theme', current_page=request.path) }}">
                             {% if session.get("theme") == "dark" %}
