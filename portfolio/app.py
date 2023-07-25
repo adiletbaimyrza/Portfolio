@@ -1,5 +1,14 @@
-from flask import Flask, render_template, abort, session, request, redirect, url_for
+from flask import (
+    Flask,
+    render_template,
+    abort,
+    session,
+    request, 
+    redirect,
+    url_for
+)
 import os
+from pymongo import MongoClient
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -7,6 +16,8 @@ load_dotenv()
 def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
+    app.config["MONGODB_URI"] = os.getenv("MONGODB_URI")
+    app.db = MongoClient(app.config["MONGODB_URI"])["Portfolio"]
     
     projects_info = [
         {
@@ -54,26 +65,9 @@ def create_app():
     def about():
         return render_template("about.html")
 
-    @app.route('/contact')
-    def contact():
-        contact_details = [
-            {
-                "desc": "adiletbaimyrza@gmail.com",
-                "class": "gmail",
-                "link": "mailto:adiletbaimyrza@gmail.com"
-            },
-            {
-                "desc": "Adilet Baimyrza",
-                "class": "linkedin",
-                "link": "https://www.linkedin.com/in/adiletbaim/"
-            },
-            {
-                "desc": "@adiletBaimyrza",
-                "class": "github",
-                "link": "https://github.com/AdiletBaimyrza"
-            }
-        ]
-        return render_template('contact.html', contact_details=contact_details)
+    @app.route('/bookshelf')
+    def bookshelf():
+        return render_template('bookshelf.html')
 
     @app.errorhandler(404)
     def page_not_found(error):
