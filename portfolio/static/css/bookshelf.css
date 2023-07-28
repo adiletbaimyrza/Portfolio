@@ -2,16 +2,19 @@
     .main-bookshelf {
         display: flex;
         flex-direction: column;
+        line-height: 2;
     }
 }
 
 .main-bookshelf {
     display: flex;
     flex-direction: column;
+    line-height: 2;
 }
 
 .yerly-bookshelf-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    list-style: 2;
 }
