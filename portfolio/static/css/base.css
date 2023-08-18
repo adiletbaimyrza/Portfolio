@@ -1,0 +1,88 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.nav-item {
+    letter-spacing: 0.06rem;
+}
+
+.home-button-wrapper {
+    display: flex;
+}
+
+.home-button {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation-item {
+    padding: 0 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s;
+    border-radius: 10px;
+    margin-left: 0.3rem;
+}
+
+.navigation-item:not(:last-of-type):hover {
+    color: var(--accent-color);
+}
+
+.navigation-item:hover {
+    background-color: var(--background-on-hover);
+}
+
+.navigation-icon {
+    width: 1.5em;
+    height: 1.5em;
+    color: inherit;
+    
+}
+
+.toggle-theme-icon-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-theme-icon {
+    width: 1.5em;
+    height: 1.5em;
+    color: var(--toggle-theme-icon-color);
+}
+
+.button {
+    font-size: inherit;
+    background: none;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+#resume {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#github {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#github-text {
+    margin-right: 0.3rem;
+}

@@ -1,5 +1,5 @@
 {% from "macros/hello.html" import hello %}
-{% from "macros/svgs.html" import moon, sun %}
+{% from "macros/svgs.html" import moon, sun, new_tab, dropdown %}
 
 <!DOCTYPE html>
 <html lang="en" class="{{ 'dark-mode' if session.get('theme') == 'dark' }}">
@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -31,32 +32,47 @@
     </head>
 
     <body>
-        <header class="header">
-            <div class="header-navbar {{ 'u-add-mb-6-dot-25rem' if request.path != url_for('about') }}">
-                <a class="header-navbar-link logo" href="{{ url_for('about') }}">
+        <nav class="nav">
+            <div class="home-button-wrapper nav-item">
+                <a class="home-button navigation-item" href="{{ url_for('about') }}">
                     <span id="at">@</span>adiletBaimyrza
                 </a>
-                <div class="nav">
-                    <a class="header-navbar-link" href="{{ url_for('projects') }}">Projects</a>
-                    <a class="header-navbar-link" href="{{ url_for('about') }}">About</a>
-                    <a class="header-navbar-link" href="https://github.com/AdiletBaimyrza" target="_blank">Github</a>
-                    <a class="header-navbar-link" href="{{ url_for('bookshelf') }}">Bookshelf</a>
-
-                    <a class="header-navbar-link" href="{{ url_for('toggle_theme', current_page=request.path) }}">
-                            {% if session.get("theme") == "dark" %}
-                                {{ sun('nav-icon')}}
-                            {% else %}
-                                {{ moon('nav-icon')}}
-                            {% endif %}
-                    </a>
-                </div>
             </div>
+            <div class="navigation nav-item">
+                <a class="navigation-item" href="#"><p>Blog</p></a>
+                <a class="navigation-item" href="{{ url_for('projects') }}"><p>Projects</p></a>
+                <button class="navigation-item button">
+                    <div id="resume">
+                        <p id="resume-text">Resume</p>
+                        {{ dropdown('navigation-icon') }}
+                    </div>
+                </button>
+                <a class="navigation-item" href="https://github.com/AdiletBaimyrza" target="_blank">
+                    <div id="github">
+                        <p id="github-text">Github</p>
+                        {{ new_tab('navigation-icon') }}
+                    </div>
+                </a>
+                <a class="navigation-item" href="{{ url_for('bookshelf') }}"><p>Bookshelf</p></a>
+                <a class="navigation-item" href="#"><p>Contact me</p></a>
 
-            {% if request.path == url_for('about') %}
-                {{ hello() }}
-            {% endif %}
-        </header>
+                <a class="navigation-item toggle-theme-icon-wrapper" href="{{ url_for('toggle_theme', current_page=request.path) }}">
+                    <div id="icon-wrapper">
+                        {% if session.get("theme") == "dark" %}
+                            {{ sun('toggle-theme-icon')}}
+                        {% else %}
+                            {{ moon('toggle-theme-icon')}}
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+        </nav>
+        <main class="main">
+            {% block content %} {% endblock content %}
+        </main>
 
-        {% block content %} {% endblock content %}
+        <footer class="footer">
+
+        </footer>
     </body>
 </html>

@@ -3,7 +3,7 @@ from flask import (
     render_template,
     abort,
     session,
-    request, 
+    request,
     redirect,
     url_for
 )
@@ -13,12 +13,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def create_app():
     app = Flask(__name__)
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY")
     app.config["MONGODB_URI"] = os.getenv("MONGODB_URI")
     app.db = MongoClient(app.config["MONGODB_URI"])["Portfolio"]
-    
+
     projects_info = [
         {
             "name": "Movie Watchlist WebApp",
@@ -56,7 +57,7 @@ def create_app():
     @app.route("/")
     def home():
         return redirect(url_for("about"))
-    
+
     @app.route("/projects")
     def projects():
         return render_template("projects.html", projects=projects_info)
@@ -76,16 +77,17 @@ def create_app():
     @app.get("/toggle-theme")
     def toggle_theme():
         current_theme = session.get("theme")
-        
+
         if current_theme == "dark":
             session["theme"] = "light"
         else:
             session["theme"] = "dark"
-            
+
         return redirect(request.args.get("current_page"))
-    
+
     return app
+
 
 if __name__ == '__main__':
     app = create_app()
-    app.run()
+    app.run(debug=True)
