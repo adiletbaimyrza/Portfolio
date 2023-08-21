@@ -1,5 +1,6 @@
 :root {
     --background-on-hover: #ebe8e8;
+    --backround-on-hover-2: #b3b0b0;
     --background-color: #fff;
     --text-color: #1c2023;
 
@@ -30,6 +31,7 @@ html {
     background-color: var(--background-color);
     color: var(--text-color);
     height: 100%;
+    font-size: clamp(0.5rem, 1rem, 3rem); 
 }
 
 body {
@@ -46,41 +48,4 @@ body {
     margin: 0 auto;
     padding: 0.2rem;
     height: 100%;
-}
-
-@media (min-width: 48.75em) {
-    .project {
-        flex-direction: row;
-        padding: 0;
-    }
-
-.project__content {
-        flex: 7;
-        margin-right: 3rem;
-        padding: 0;
-    }
-}
-
-@media screen and (min-width: 1px) {
-    html {
-        font-size: 12px;
-    }
-}
-
-@media screen and (min-width: 750px) {
-    html {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 1201px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-@media screen and (min-width: 1601px) {
-    html {
-        font-size: 20px;
-    }
 }

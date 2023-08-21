@@ -19,6 +19,18 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    padding: 1rem;
+    
+}
+
+.menu:hover {
+    cursor: pointer;
+    background: var(--background-on-hover);
+}
+
+.menu {
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 .navigation {
@@ -33,10 +45,8 @@
     transition: background 0.3s;
     border-radius: 10px;
     margin-left: 0.3rem;
-}
-
-.navigation-item:not(:last-of-type):hover {
-    color: var(--accent-color);
+    display: flex;
+    align-items: center;
 }
 
 .navigation-item:hover {
@@ -90,4 +100,67 @@
 
 #resume-text {
     font-family: 'Inter', sans-serif;
+}
+
+.menu {
+        display: none;
+    }
+
+@media screen and (max-width: 1100px) {
+    
+    .menu {
+        display: block;
+    }
+    
+    .nav {
+        flex-direction: column;
+        margin-top: 1rem;
+        line-height: 0.5;
+    }
+    
+    .navigation-item {
+        margin: 0;
+    }
+    
+    #resume-text {
+        margin: 0.8rem 0;
+        
+    }
+    
+    .navigation-item:hover {
+        color: var(--accent-color);
+    }
+    
+    .navigation {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .home-button {
+        display: none;
+    }
+    
+    .toggle-theme-icon-wrapper {
+        padding: 0.7rem;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .menu-background {
+        background: var(--background-on-hover);
+        border-radius: 1rem;
+        
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 0.8rem;
+    }
 }

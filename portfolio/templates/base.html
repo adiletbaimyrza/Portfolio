@@ -1,5 +1,5 @@
 {% from "macros/hello.html" import hello %}
-{% from "macros/svgs.html" import moon, sun, new_tab, dropdown %}
+{% from "macros/svgs.html" import moon, sun, new_tab, dropdown, menu %}
 
 <!DOCTYPE html>
 <html lang="en" class="{{ 'dark-mode' if session.get('theme') == 'dark' }}">
@@ -32,13 +32,32 @@
     </head>
 
     <body>
-        <nav class="nav">
+        <nav class="nav" id="nav">
             <div class="home-button-wrapper nav-item">
                 <a class="home-button navigation-item" href="{{ url_for('about') }}">
                     <span id="at">@</span>adiletBaimyrza
                 </a>
+                <a class="menu" href="javascript:void(0);" onclick="myFunction()">
+                    {{ menu('nav-icon') }}
+                </a>
             </div>
-            <div class="navigation nav-item">
+
+            <script>
+                function myFunction() {
+                    var menu = document.getElementsByClassName("menu");
+                    var navigation = document.getElementById("navigation");
+                    if (navigation.className === "navigation nav-item hide") {
+                        navigation.className = "navigation nav-item";
+                        menu.className += " menu-background";
+                    } else {
+                        navigation.className += " hide";
+                        nav.className = 'nav';
+                        menu.className = 'menu';
+                    }
+                }
+            </script>
+
+            <div class="navigation nav-item hide" id="navigation">
                 <a class="navigation-item" href="#"><p>Blog</p></a>
                 <a class="navigation-item" href="{{ url_for('projects') }}"><p>Projects</p></a>
                 <button class="navigation-item button">
