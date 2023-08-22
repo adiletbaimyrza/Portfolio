@@ -21,6 +21,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        margin-left: 0;
     }
 }
 
@@ -59,6 +60,7 @@
         flex-direction: column;
         align-items:flex-start;
         height: auto;
+        margin-bottom: 5rem;
     }
 
     #hello-photo-con {
