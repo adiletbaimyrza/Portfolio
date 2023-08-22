@@ -1,35 +1,35 @@
-.about {
+#about {
     display: flex;
     align-items: center;
     background: var(--background-on-hover);
     border-radius: 1rem;
 }
 
-.about-text-container {
+#about-text-con {
     /*! padding: 0 5rem 2rem 3rem; */
 }
 
-.about-photo-container {
+#about-photo-con {
     /*! width: 100%; */
 }
 
-.about-paragraph {
+.text-block {
     line-height: 2;
     font-size: 1.1rem;
 }
 
-.about-photo-interior {
+#about-photo-interior {
     border-radius: 1rem;
     
     background: var(--accent-color-2);
 }
 
-#projects-header {
+#proj-header {
     margin-top: 5rem;
     font-size: 4rem;
 }
 
-.project {
+.proj {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -37,21 +37,21 @@
     margin-bottom: 7rem;
 }
 
-#project-1 {
+#proj-1 {
     margin-bottom: 10rem;
 }
 
-#project-2 {
+#proj-2 {
     margin-bottom: 14rem;
 }
 
-.project-2-photo-1 {
+#proj-2-photo-1-con {
     border-top-right-radius: 1rem;
     
     background-color: var(--accent-color-2);
 }
 
-.project-2-photo-2 {
+#proj-2-photo-2-con {
     grid-column: span 2;
     
     border-bottom-left-radius: 1rem;
@@ -60,12 +60,12 @@
     background-color: var(--accent-color-2);
 }
 
-#project-desc-2 {
+#proj-desc-2 {
     grid-column: span 1;
     border-top-right-radius: 0;
 }
 
-.project-desc {
+.proj-desc {
     grid-column: span 2;
     display: flex;
     padding: 2rem 3rem;
@@ -74,20 +74,19 @@
     background-color: var(--background-on-hover);
 }
 
-.project-photo-interior-1 {
+#proj-1-photo-1-con {
     width: 40rem;
-    
     background: var(--accent-color-2);
 }
 
-.project-photo-2 {
+#proj-1-photo-2-con {
     border-bottom-left-radius: 1rem;
     width: 36rem;
     
     background: var(--accent-color-2);
 }
 
-.project-photo-3 {
+#proj-1-photo-3-con {
     border-bottom-right-radius: 1rem;
     width: 36.2rem;
     
@@ -95,19 +94,19 @@
 }
 
 
-.project-links {
+.proj-links {
     display: flex;
     justify-content: left;
     line-break: 0;
 }
 
-.link-icon-container {
+.link-icon-con {
     padding: 0.7rem;
     border-radius: 47%;
     transition: ease-in-out 0.2s background-color;
 }
 
-.link-icon-container:hover {
+.link-icon-con:hover {
     background-color: var(--background-on-hover);
 }
 
@@ -118,62 +117,90 @@
     stroke-width: 0.1375rem;
 }
 
+#proj-1-photo-3-con {
+
+}
+
+#proj-1-photo-2-con ,
+#proj-1-photo-3 {
+    object-fit:cover;
+        width: 100%;
+}
+
+
 @media screen and (max-width: 1000px) {
     
-    .project-photo-3-ph {
+    #proj-1-photo-3 {
         border-bottom-left-radius: 1rem;
         border-bottom-right-radius: 1rem;
+        object-fit: cover;
+        width: 100%;
     }
     
-    #project-2,
-    #project-1 {
+    #proj-1-photo-2-con ,
+    #proj-1-photo-3-con{
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    #proj-2,
+    #proj-1 {
         display: flex;
         flex-direction: column;
         margin-bottom: 6rem;
     }
-    .about {
+    
+    #about {
         flex-direction: column;
         height: auto;
     }
     
-    #project-2-photo-1-ph,
-    #project-2-photo-2-ph {
+    #hello-photo {
+        margin: 0;
+    }
+    
+    #proj-2-photo-1,
+    #proj-2-photo-2 {
        width: 100%;
     }
     
-    #project-2-photo-2-ph {
+    #proj-2-photo-2 {
         border-bottom-right-radius: 1rem;
     }
     
-    .about-text-container {
+    #about-text-con {
       padding: 0 1rem 1rem 1rem;
     }
     
-    .project-desc {
+    .proj-desc {
         padding: 0 1rem 1rem 1rem;
         
     }
     
-    #project-desc-2 {
+    #proj-desc-2 {
         border-top-right-radius: 1rem;
     }
     
-    .project {
+    .proj {
         display: flex;
         flex-direction: column;
     }
     
-    .project-desc {
+    .proj-desc {
         display: flex;
         flex-direction: column;
     }
     
-    .about-photo-interior-ph {
+    #about-photo {
         width: 100%;
         border-radius: 1rem;
     }
     
-    .project-photo-interior-1-ph {
+    #proj-1-photo-1-con {
+        width: 100%;
+    }
+    
+    #proj-1-photo-1 {
         width: 100%;
     }
     
@@ -181,7 +208,7 @@
         margin: 0 1rem;
     }
     
-    .about-photo-container {
+    #about-photo-con {
         padding: 1rem;
     }
 }

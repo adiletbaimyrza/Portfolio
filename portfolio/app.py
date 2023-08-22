@@ -20,47 +20,9 @@ def create_app():
     app.config["MONGODB_URI"] = os.getenv("MONGODB_URI")
     app.db = MongoClient(app.config["MONGODB_URI"])["Portfolio"]
 
-    projects_info = [
-        {
-            "name": "Movie Watchlist WebApp",
-            "desc": """I am a Movie geek, so I built a secure and user-friendly web app using HTML,
-                    CSS, and Flask. Movie Watchlist allows you to effortlessly create and manage your
-                    personalized movie collection. Powered by MongoDB Cloud for personalized data storage
-                    and hosted on Heroku.""",
-            "thumb": "img/movie-watchlist-wall.png",
-            "categories": ["python", "css", "html", "mongodb"],
-            "prod": "https://movie-watchlist-by-adilet-b565458f53bd.herokuapp.com/login",
-            "github": "https://github.com/AdiletBaimyrza/movie-watchlist",
-        },
-        {
-            "name": "Lyft Back-End Engineering Virtual Experience Program",
-            "desc": """At this Virtual Experience Program, I refactored the codebase by the design
-                    given by engineers, added a new parameter for car servicing and wrote unit tests for it
-                    while following SOLID principles.""",
-            "thumb": "img/lyft-logo.png",
-            "categories": ["python", "unittests", "software design"],
-            "prod": "https://www.theforage.com/virtual-internships/prototype/xSw9echtixLAoPdsH/Lyft-Back-End-Engineering-Virtual-Experience-Program",
-            "github": "https://github.com/AdiletBaimyrza/forage-lyft-starter-repo",
-        },
-        {
-            "name": "Team Project - Telegram Bot",
-            "desc": """Led a group of three students in the development of a Telegram-bot
-            that could generate graphs of mathematical functions based on functions given
-            as strings and manipulate them with various commands. This project was the part of Software Engineering Course.""",
-            "thumb": "img/bot.png",
-            "categories": ["python", "numpy", "matplotlib", "telegram-api"],
-            "prod": "#",
-            "github": "https://github.com/AdiletBaimyrza/FunctionPlotterBot",
-        },
-    ]
-
     @app.route("/")
     def home():
         return redirect(url_for("about"))
-
-    @app.route("/projects")
-    def projects():
-        return render_template("projects.html", projects=projects_info)
 
     @app.route("/about")
     def about():

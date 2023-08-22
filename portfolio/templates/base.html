@@ -37,14 +37,14 @@
                 <a class="home-button navigation-item" href="{{ url_for('about') }}">
                     <span id="at">@</span>adiletBaimyrza
                 </a>
-                <a class="menu" href="javascript:void(0);" onclick="myFunction()">
+                <a class="menu" id="home-menu" href="javascript:void(0);" onclick="myFunction()">
                     {{ menu('nav-icon') }}
                 </a>
             </div>
 
             <script>
                 function myFunction() {
-                    var menu = document.getElementsByClassName("menu");
+                    var menu = document.getElementById("home-menu");
                     var navigation = document.getElementById("navigation");
                     if (navigation.className === "navigation nav-item hide") {
                         navigation.className = "navigation nav-item";
@@ -59,7 +59,7 @@
 
             <div class="navigation nav-item hide" id="navigation">
                 <a class="navigation-item" href="#"><p>Blog</p></a>
-                <a class="navigation-item" href="{{ url_for('projects') }}"><p>Projects</p></a>
+                <a class="navigation-item" href="#"><p>Projects</p></a>
                 <button class="navigation-item button">
                     <div id="resume">
                         <p id="resume-text">Resume</p>

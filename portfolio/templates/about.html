@@ -1,143 +1,130 @@
 {% extends "base.html" %}
+
 {% from "macros/svgs.html" import github, website %}
 
 {% block head_content %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hello.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/projects.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+
     <script src="{{ url_for('static', filename='js/hello.js')}}" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
 {% endblock head_content %}
 
 
 {% block content %}
-    <div class="hello">
-        <div class="hello-photo-container">
-            <img class="hello-photo" src="{{ url_for('static', filename='img/hello_photo.png') }}">
+    <section id="hello">
+        <div id="hello-photo-con">
+            <img id="hello-photo" src="{{ url_for('static', filename='img/hello_photo.png') }}">
         </div>
-        <div class="name-motto-container">
-            <h1 class="name">Hi, I am Adilet</h1>
-            <p class="motto">I <span class="u-accent" id="changingWord">build</span> things for Web using <span class="u-accent">Python</span></p>
+        <div id="hello-name-con">
+            <h1 id="name">Hi, I am Adilet</h1>
+            <p id="motto">
+                I 
+                <span class="u-accent" id="changingWord">build</span>
+                things for Web using
+                <span class="u-accent">Python</span>
+            </p>
         </div>
-    </div>
+    </section>
 
-    <div class="about">
-        <div class="about-text-container">
-            <h1 class="about-header">About me</h1>
-            <p class="about-paragraph">
+    <section id="about">
+        <div id="about-text-con">
+            <h1 id="header">About me</h1>
+            <p class="text-block">
                 As I prepare to start my final year at the University of Lodz,
                 I am actively seeking entry-level Software Engineering positions.
             </p>
-            <p class="about-paragraph">
-                I am proficient in <span class="u-accent">Python</span>
+            <p class="text-block">
+                I am proficient in<span class="u-accent">Python</span>
                 and <span class="u-accent">C++</span>, currently learning <span class="u-accent">Data Science</span> tools and <span class="u-accent">Data Visualization</span>, as well as <span class="u-accent">JQuery</span>.
                 Nowadays, I am working on personal projects, primarily using Python.
                 Aside from programming, I am also gearing up for the upcoming Autumn marathons season in Poland.
             </p>
-            <p class="about-paragraph">
+            <p class="text-block">
                 Running and coding are very similar. Both require agility,
                 adaptability, and ongoing self-improvement.
             </p>
         </div>
-        <div class="about-photo-container">
-            <img src="{{ url_for('static', filename='img/about-photo.png') }}" class="about-photo-interior-ph">
+        <div id="about-photo-con">
+            <img src="{{ url_for('static', filename='img/about-photo.png') }}" id="about-photo">
         </div>
-    </div>
+    </section>
 
-    <div class="projects">
-        <h1 id="projects-header">Projects</h1>
-        <div class="project" id="project-1">
-            <div class="project-desc">
-                <div class="project-desc-text">
-                    <h1 class="about-header">Pastebin.com Clone</h1>
-                    <p class="about-paragraph">
+    <section id="projects">
+        <h1 id="proj-header">Projects</h1>
+
+        <div class="proj" id="proj-1">
+            <div class="proj-desc">
+                <div class="proj-desc-text">
+                    <h1 class="header">Pastebin.com Clone</h1>
+                    <p class="text-block">
                         A scalable full-stack web application built using
                         Python micro-framework Flask and JavaScript framework React.
                     </p>
-                    <p class="about-paragraph">
+                    <p class="text-block">
                         This webapp is a clone of a popular text-sharing website Pastebin.com.
                     </p>
                     
-                    <div class="project-links">
-                        <div class="link-icon-container">
+                    <div class="proj-links">
+                        <div class="link-icon-con">
                             <a href="#" target="_blank">{{ github('link-icon') }}</a>
                         </div>
                     </div>
                 </div>
-                <div class="project-photo-1">
+
+                <div id="proj-1-photo-1-con"></div>
                     {% if session.get("theme") == "dark" %}
-                        <div class="project-photo-interior-1"></div>
-                        <img src="{{ url_for('static', filename='img/pastebin-dark.png') }}" class="project-photo-interior-1-ph">
+                        <img src="{{ url_for('static', filename='img/pastebin-dark.png') }}" id="proj-1-photo-1">
                     {% else %}
-                        <div class="project-photo-interior-1"></div>
-                        <img src="{{ url_for('static', filename='img/pastebin-light.png') }}" class="project-photo-interior-1-ph">
+                        <img src="{{ url_for('static', filename='img/pastebin-light.png') }}" id="proj-1-photo-1">
                     {% endif %}
                 </div>
             </div>
-            <div class="project-photo-2"></div>
-            <div class="project-photo-3"></div>
-            <img src="{{ url_for('static', filename='img/pastebin-1.png') }}" class="project-photo-2-ph">
-            <img src="{{ url_for('static', filename='img/pastebin-3.png') }}" class="project-photo-3-ph">
+
+            <div id="proj-1-photo-2-con">
+                <img src="{{ url_for('static', filename='img/pastebin-1.png') }}" id="proj-1-photo-2">
+            </div>
+            <div id="proj-1-photo-3-con">
+                <img src="{{ url_for('static', filename='img/pastebin-3.png') }}" id="proj-1-photo-3">
+            </div>
         </div>
 
-        <div class="project" id="project-2">
-            <div class="project-desc" id="project-desc-2">
-                <div class="project-desc-text">
-                    <h1 class="about-header">Earthquake Data Visualization</h1>
-                    <p class="about-paragraph">
+        <div class="proj" id="proj-2">
+            <div class="proj-desc" id="proj-desc-2">
+                <div class="proj-desc-text">
+                    <h1 class="header">Earthquake Data Visualization</h1>
+                    <p class="text-block">
                         Earthquake Data Visualization Dashbooard was built using Dash
                         low-code framework and Pandas library for data cleaning and preparation
                         in Python. 
                     </p>
-                    <p class="about-paragraph">
+                    <p class="text-block">
                         The webapp allows you to observe and analyze more than 8000 earthquakes
                         from 1960 till 2023.
                     </p>
                     
-                    <div class="project-links">
-                        <div class="link-icon-container">
+                    <div class="proj-links">
+                        <div class="link-icon-con">
                             <a href="#" target="_blank">{{ github('link-icon') }}</a>
                         </div>
-                        <div class="link-icon-container">
+                        <div class="link-icon-con">
                             <a href="#" target="_blank">{{ website('link-icon') }}</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="project-2-photo-1"></div>
-            <div class="project-2-photo-2"></div>
-            <img src="{{ url_for('static', filename='img/dv-1.png') }}" class="project-photo-interior-1" id="project-2-photo-1-ph">
-            <img src="{{ url_for('static', filename='img/dv-2.png') }}" class="project-photo-2" id="project-2-photo-2-ph">
-        </div>
-        <div class="project" id="project-2">
-            <div class="project-desc" id="project-desc-2">
-                <div class="project-desc-text">
-                    <h1 class="about-header">Earthquake Data Visualization</h1>
-                    <p class="about-paragraph">
-                        Earthquake Data Visualization Dashbooard was built using Dash
-                        low-code framework and Pandas library for data cleaning and preparation
-                        in Python. 
-                    </p>
-                    <p class="about-paragraph">
-                        The webapp allows you to observe and analyze more than 8000 earthquakes
-                        from 1960 till 2023.
-                    </p>
-                    
-                    <div class="project-links">
-                        <div class="link-icon-container">
-                            <a href="#" target="_blank">{{ github('link-icon') }}</a>
-                        </div>
-                        <div class="link-icon-container">
-                            <a href="#" target="_blank">{{ website('link-icon') }}</a>
-                        </div>
-                    </div>
-                </div>
+            <div id="proj-2-photo-1-con">
+                <img src="{{ url_for('static', filename='img/dv-1.png') }}" id="proj-2-photo-1">
             </div>
-            <div class="project-2-photo-1"></div>
-            <div class="project-2-photo-2"></div>
-            <img src="{{ url_for('static', filename='img/dv-1.png') }}" class="project-photo-interior-1" id="project-2-photo-1-ph">
-            <img src="{{ url_for('static', filename='img/dv-2.png') }}" class="project-photo-2" id="project-2-photo-2-ph">
+            <div id="proj-2-photo-2-con">
+                <img src="{{ url_for('static', filename='img/dv-2.png') }}" id="proj-2-photo-2">
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="contact">
+        <!--submit form-->
+    </section>
 {% endblock content %}
