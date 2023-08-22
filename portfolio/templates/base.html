@@ -1,4 +1,3 @@
-{% from "macros/hello.html" import hello %}
 {% from "macros/svgs.html" import moon, sun, new_tab, dropdown, menu %}
 
 <!DOCTYPE html>
@@ -28,31 +27,33 @@
 
         <title>Adilet Baimyrza | Portfolio</title>
 
-        {% block head_content %} {% endblock head_content %}
+        {% block head_content %}
+            <!-- head_content -->
+        {% endblock head_content %}
     </head>
 
     <body>
         <nav class="nav" id="nav">
-            <div class="home-button-wrapper nav-item">
-                <a class="home-button navigation-item" href="{{ url_for('about') }}">
+            <div class="nav-item" id="home-button-wrapper">
+                <a class="navigation-item" id="home-button" href="{{ url_for('about') }}">
                     <span id="at">@</span>adiletBaimyrza
                 </a>
-                <a class="menu" id="home-menu" href="javascript:void(0);" onclick="myFunction()">
+                <a class="menu" id="menu" href="javascript:void(0);" onclick="toggleHomeButton()">
                     {{ menu('nav-icon') }}
                 </a>
             </div>
 
             <script>
-                function myFunction() {
-                    var menu = document.getElementById("home-menu");
+                function toggleHomeButton() {
+                    var menu = document.getElementById("menu");
                     var navigation = document.getElementById("navigation");
                     if (navigation.className === "navigation nav-item hide") {
                         navigation.className = "navigation nav-item";
                         menu.className += " menu-background";
                     } else {
                         navigation.className += " hide";
-                        nav.className = 'nav';
-                        menu.className = 'menu';
+                        nav.className = "nav";
+                        menu.className = "menu";
                     }
                 }
             </script>
@@ -86,12 +87,15 @@
                 </a>
             </div>
         </nav>
+
         <main class="main">
-            {% block content %} {% endblock content %}
+            {% block content %}
+                <!-- main_content -->
+            {% endblock content %}
         </main>
 
         <footer class="footer">
-
+            <!-- footer -->
         </footer>
     </body>
 </html>
