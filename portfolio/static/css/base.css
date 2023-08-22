@@ -1,3 +1,5 @@
+/* ---------- NAV START ---------- */
+
 .nav {
     display: flex;
     flex-direction: row;
@@ -10,27 +12,35 @@
     letter-spacing: 0.06rem;
 }
 
-.home-button-wrapper {
+#home-button-wrapper {
     display: flex;
 }
 
-.home-button {
+#home-button {
     display: flex;
     align-items: center;
     height: 100%;
     width: 100%;
     padding: 1rem;
-    
 }
 
-.menu:hover {
-    cursor: pointer;
-    background: var(--background-on-hover);
+#at {
+    color: var(--accent-color);
+    font-weight: bolder;
 }
 
 .menu {
     padding: 1rem;
     border-radius: 1rem;
+}
+
+.nav-icon {
+    /* check if style needed */
+}
+
+.menu:hover {
+    cursor: pointer;
+    background: var(--background-on-hover);
 }
 
 .navigation {
@@ -106,6 +116,18 @@
         display: none;
     }
 
+@media screen and (max-width: 594px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .navigation-item {
+        margin-bottom: 1rem;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     
     .menu {
@@ -140,7 +162,7 @@
         height: auto;
     }
     
-    .home-button {
+    #home-button {
         display: none;
     }
     
