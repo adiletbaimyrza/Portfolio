@@ -32,7 +32,7 @@
 }
 
 .nav-icon {
-    /* check if style needed */
+    color: var(--accent-color);
 }
 
 .menu:hover {
