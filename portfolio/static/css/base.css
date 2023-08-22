@@ -19,7 +19,6 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    padding: 1rem;
 }
 
 #at {
@@ -124,7 +123,7 @@
     .nav {
         display: flex;
         flex-direction: column;
-        margin-bottom: 0;
+        margin-bottom: 4rem;
     }
 
     .navigation-item {
@@ -133,6 +132,10 @@
 }
 
 @media screen and (max-width: 1100px) {
+    .nav-icon {
+        width: 2.5em;
+        height: 2.5em;
+    }
     
     .menu {
         display: block;
