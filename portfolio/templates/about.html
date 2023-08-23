@@ -124,6 +124,38 @@
     </section>
 
     <section id="contact">
-        <!--submit form-->
+        <script>
+            function submitForm() {
+                alert("Thank you for your message! This feature is currently being developed.");
+            }
+        </script>
+        <div id="contact-photo-con">
+            <img src="{{ url_for('static', filename='img/contactme.png') }}" id="contact-photo">
+        </div>
+        <form id="form" action="" onsubmit="submitForm(); return false;" method="POST">
+            <div class="input">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" name="form-name" required>
+            </div>
+            <div class="input">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="input">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div id="submit-button-con">
+                <input id="submit-button" type="submit" value="Submit">
+            </div>
+        </form>
     </section>
+
+    <footer class="footer">
+        <p id="footer-text">© 2023 Adilet Baimyrza</p>
+    </footer>
 {% endblock content %}

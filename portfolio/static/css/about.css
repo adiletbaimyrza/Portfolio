@@ -29,6 +29,15 @@
     font-size: 1.1rem;
 }
 
+.footer {
+    padding: 1rem 0;
+}
+
+#footer-text {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
 @media screen and (max-width: 500px){
     #about-photo-con {
         padding: 0 5rem;

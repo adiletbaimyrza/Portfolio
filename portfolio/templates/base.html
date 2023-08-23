@@ -59,8 +59,16 @@
             </script>
 
             <div class="navigation nav-item hide" id="navigation">
-                <a class="navigation-item" href="#"><p>Blog</p></a>
-                <a class="navigation-item" href="#"><p>Projects</p></a>
+                <a id="blog-link" class="navigation-item" href="#"><p>Blog</p></a>
+                <script>
+                    var link = document.getElementById("blog-link");
+                    link.addEventListener("click", function(event) {
+                        event.preventDefault();
+                        alert("Thank you for dropping by my website! I'm in the process of developing this feature. It might be ready by the time Christmas comes around;) 🎄✨");
+                    });
+                </script>
+                
+                <a class="navigation-item scroll" href="#projects"><p>Projects</p></a>
                 <button class="navigation-item button">
                     <div id="resume">
                         <p id="resume-text">Resume</p>
@@ -74,7 +82,7 @@
                     </div>
                 </a>
                 <a class="navigation-item" href="{{ url_for('bookshelf') }}"><p>Bookshelf</p></a>
-                <a class="navigation-item" href="#"><p>Contact me</p></a>
+                <a class="navigation-item scroll" href="#contact"><p>Contact me</p></a>
 
                 <a class="navigation-item toggle-theme-icon-wrapper" href="{{ url_for('toggle_theme', current_page=request.path) }}">
                     <div id="icon-wrapper">
@@ -94,8 +102,22 @@
             {% endblock content %}
         </main>
 
-        <footer class="footer">
-            <!-- footer -->
-        </footer>
+        <script>
+            function smoothScroll(target) {
+                document.querySelector(target).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.scroll').forEach(function(link) {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const target = link.getAttribute('href');
+                        smoothScroll(target);
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
