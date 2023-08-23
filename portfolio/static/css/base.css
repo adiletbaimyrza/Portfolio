@@ -58,6 +58,7 @@
 
 .navigation-item:hover {
     background-color: var(--background-on-hover);
+    color: var(--accent-color);
 }
 
 .navigation-icon {
