@@ -2,21 +2,27 @@
     --background-on-hover: #ebe8e8;
     --backround-on-hover-2: #b3b0b0;
     --background-color: #fff;
+    --section-background-color: #f7f8fe;
+    
+    --input: #fff;
+    
     --text-color: #1c2023;
 
-    --accent-color: rgb(61, 61, 221);
+    --accent-color: #6837fb;
     --accent-color-2: rgb(255, 123, 0);
     
-    --toggle-theme-icon-color: rgb(61, 61, 221);
+    --toggle-theme-icon-color: #4d16f2;
 }
 
 :root.dark-mode {
-    --background-on-hover: #222529;
-    --background-color: #1c2023;
+    --background-on-hover: #2d2d2d;
+    --background-color: #0e0e0e;
+    --section-background-color: #0e0e0e;
     --text-color: #fff;
+    --input: #2d2d2d;
     
-    --accent-color: rgb(81, 35, 207);
-    --accent-color-2: orange;
+    --accent-color: #4209ed;
+    --accent-color-2: #ff6530;
     
     --toggle-theme-icon-color: yellow;
 }
