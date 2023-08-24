@@ -1,20 +1,38 @@
-@media screen and (max-width: 1100px) {
-    .main-bookshelf {
-        display: flex;
-        flex-direction: column;
-        line-height: 2;
-    }
-}
-
-.main-bookshelf {
+.yearly-bookshelf-con {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+#bookshelf-main-head {
+    font-size: 3rem;
+}
+
+#bookshelf-info {
+    font-size: 1.1rem;
+    border: solid 1px var(--background-on-hover);
+    padding: 1rem 2rem;
+    max-width: 780px;
+    border-radius: 1rem;
     line-height: 2;
+    background-color: var(--section-background-color);
 }
 
-.yerly-bookshelf-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: 2;
+.bookshelf-header {
+    font-size: 2.5rem;
+}
+
+.list-item {
+    border: 1px solid var(--background-on-hover);
+    padding: 0.8rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.6rem;
+    background-color: var(--section-background-color);
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        margin: 0.4rem 1rem;
+    }
 }

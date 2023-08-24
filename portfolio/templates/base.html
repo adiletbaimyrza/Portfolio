@@ -1,63 +1,169 @@
-{% from "macros/hello.html" import hello %}
-{% from "macros/svgs.html" import moon, sun %}
+{% from "macros/svgs.html" import moon, sun, new_tab, menu %}
 
 <!DOCTYPE html>
 <html lang="en" class="{{ 'dark-mode' if session.get('theme') == 'dark' }}">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
-        >
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYCME774G1"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYCME774G1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZYCME774G1');
+    </script>
+
+    <title>Adilet Baimyrza | Portfolio</title>
+
+    {% block head_content %}
+    <!-- head_content -->
+    {% endblock head_content %}
+</head>
+
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-item" id="home-button-wrapper">
+            <a class="navigation-item" id="home-button" href="{{ url_for('home') }}">
+                <span id="at">@</span>adiletBaimyrza
+            </a>
+            <a class="menu" id="menu" href="javascript:void(0);" onclick="toggleHomeButton()">
+                {{ menu('nav-icon') }}
+            </a>
+        </div>
+
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-ZYCME774G1');
+            function toggleHomeButton() {
+                var menu = document.getElementById("menu");
+                var navigation = document.getElementById("navigation");
+                if (navigation.className === "navigation nav-item hide") {
+                    navigation.className = "navigation nav-item";
+                    menu.className += " menu-background";
+                } else {
+                    navigation.className += " hide";
+                    nav.className = "nav";
+                    menu.className = "menu";
+                }
+            }
         </script>
 
-
-        <title>Adilet Baimyrza | Portfolio</title>
-
-        {% block head_content %} {% endblock head_content %}
-    </head>
-
-    <body>
-        <header class="header">
-            <div class="header-navbar {{ 'u-add-mb-6-dot-25rem' if request.path != url_for('about') }}">
-                <a class="header-navbar-link logo" href="{{ url_for('about') }}">
-                    <span id="at">@</span>adiletBaimyrza
-                </a>
-                <div class="nav">
-                    <a class="header-navbar-link" href="{{ url_for('projects') }}">Projects</a>
-                    <a class="header-navbar-link" href="{{ url_for('about') }}">About</a>
-                    <a class="header-navbar-link" href="https://github.com/AdiletBaimyrza" target="_blank">Github</a>
-                    <a class="header-navbar-link" href="{{ url_for('bookshelf') }}">Bookshelf</a>
-
-                    <a class="header-navbar-link" href="{{ url_for('toggle_theme', current_page=request.path) }}">
-                            {% if session.get("theme") == "dark" %}
-                                {{ sun('nav-icon')}}
-                            {% else %}
-                                {{ moon('nav-icon')}}
-                            {% endif %}
-                    </a>
+        <div class="navigation nav-item hide" id="navigation">
+            <a id="blog-link" class="navigation-item" href="#">
+                <p>Blog</p>
+            </a>
+            <script>
+                var link = document.getElementById("blog-link");
+                link.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    alert("Thank you for dropping by my website! I'm in the process of developing this feature. It might be ready by the time Christmas comes around;) 🎄✨");
+                });
+            </script>
+            {% if request.path == url_for('home') %}
+            <a class="navigation-item scroll" href="#projects">
+                <p>Projects</p>
+            </a>
+            {% else %}
+            <a class="navigation-item" href="{{ url_for('home') }}">
+                <p>Projects</p>
+            </a>
+            {% endif %}
+            <div class="dropdown">
+                <button class="navigation-item button dropbtn" onclick="dropDown()">
+                    Resume
+                </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a id="preview" class="dropdown-link" href="{{ url_for('static', filename='docs/adilet-baimyrza-resume.pdf') }}"
+                        target="_blank">Quick view</a>
+                    <a id="download" class="dropdown-link" href="{{ url_for('static', filename='docs/adilet-baimyrza-resume.pdf') }}"
+                        download>Download</a>
                 </div>
             </div>
+            
+            <script>
+                
+                function dropDown() {
+                    document.getElementById("myDropdown").classList.toggle("show");
+                }
 
-            {% if request.path == url_for('about') %}
-                {{ hello() }}
+                window.onclick = function (event) {
+                    if (!event.target.matches('.dropbtn')) {
+                        var dropdowns = document.getElementsByClassName("dropdown-content");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                } 
+            </script>
+
+            <a class="navigation-item" href="https://github.com/AdiletBaimyrza" target="_blank">
+                <div id="github">
+                    <p id="github-text">Github</p>
+                    {{ new_tab('navigation-icon') }}
+                </div>
+            </a>
+            <a class="navigation-item" href="{{ url_for('bookshelf') }}">
+                <p>Bookshelf</p>
+            </a>
+            {% if request.path == url_for('home') %}
+            <a class="navigation-item scroll" href="#contact">
+                <p>Contact me</p>
+            </a>
+            {% else %}
+            <a class="navigation-item" href="{{ url_for('home') }}">
+                <p>Contact me</p>
+            </a>
             {% endif %}
-        </header>
 
-        {% block content %} {% endblock content %}
-    </body>
+            <a class="navigation-item toggle-theme-icon-wrapper"
+                href="{{ url_for('toggle_theme', current_page=request.path) }}">
+                <div id="icon-wrapper">
+                    {% if session.get("theme") == "dark" %}
+                    {{ sun('toggle-theme-icon')}}
+                    {% else %}
+                    {{ moon('toggle-theme-icon')}}
+                    {% endif %}
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <main class="main">
+        {% block content %}
+        <!-- main_content -->
+        {% endblock content %}
+    </main>
+
+    <script>
+        function smoothScroll(target) {
+            document.querySelector(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.scroll').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = link.getAttribute('href');
+                    smoothScroll(target);
+                });
+            });
+        });
+    </script>
+</body>
+
 </html>

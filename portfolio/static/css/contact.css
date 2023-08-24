@@ -1,0 +1,79 @@
+#contact {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+#contact-photo-con {
+  margin-right: 1rem;
+}
+
+#contact-photo {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+#form {
+  font-size: 1.1rem;
+  width: 100%;
+  padding: 1rem;
+  border: solid 1px var(--background-on-hover);;
+  border-radius: 1rem;
+  background-color: var(--section-background-color);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+label {
+  padding-bottom: 0.5rem;
+}
+
+input {
+  color: var(--text-color);
+  background-color: var(--input);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  border: var(--background-on-hover) 1px solid;
+}
+
+textarea {
+  color: var(--text-color);
+  background-color: var(--input);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  height: 100%;
+  border: var(--background-on-hover) 1px solid;
+}
+
+#submit-button-con {
+display: flex;
+justify-content: flex-end;
+padding:  1rem;
+}
+
+#submit-button {
+  color: white;
+  background-color: var(--accent-color);
+  border: none;
+  padding: 1.3rem 2rem;
+  transition: background 0.1s ease-in-out;
+}
+
+#submit-button:hover {
+  background-color: #5d43aa;
+}
+
+@media screen and (max-width: 1100px) {
+  #contact-photo-con {
+    display: none;
+  }
+
+  #contact {
+    width: 100%;
+  }
+}
