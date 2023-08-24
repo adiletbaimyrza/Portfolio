@@ -20,6 +20,12 @@
     background-color: var(--background-on-hover);
 }
 
+@media screen and (min-width: 1101px) {
+    #proj-desc-text-1 {
+        width: 60%;
+    }
+}
+
 #proj-desc-2 {
     grid-column: span 1;
     border-top-right-radius: 0;
