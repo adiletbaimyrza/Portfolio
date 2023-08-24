@@ -20,22 +20,22 @@
     border-radius: 1rem;
 }
 
-.header {
+#header, .header {
     font-size: 2rem;
 }
 
+.page-link {
+    text-decoration: none;
+    transition: text-decoration 0.2s ease-in-out;
+}
+
+.page-link:hover {
+    text-decoration: underline;
+}
+
 .text-block {
-    line-height: 2;
+    line-height: 1.5;
     font-size: 1.1rem;
-}
-
-.footer {
-    padding: 1rem 0;
-}
-
-#footer-text {
-    font-size: 1.1rem;
-    text-align: center;
 }
 
 @media screen and (max-width: 500px){

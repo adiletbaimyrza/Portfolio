@@ -8,7 +8,7 @@
     
     --text-color: #1c2023;
 
-    --accent-color: #6837fb;
+    --accent-color: #4512ff;
     --accent-color-2: rgb(255, 123, 0);
     
     --toggle-theme-icon-color: #4d16f2;
@@ -50,6 +50,10 @@ body {
 
 .u-accent {
     color: var(--accent-color);
+}
+
+.u-accent-2 {
+    color: var(--accent-color-2);
 }
 
 .main {

@@ -22,15 +22,14 @@ def create_app():
 
     @app.route("/")
     def home():
-        return redirect(url_for("about"))
-
-    @app.route("/about")
-    def about():
         return render_template("about.html")
 
     @app.route('/bookshelf')
     def bookshelf():
         return render_template('bookshelf.html')
+
+    # make route for blog
+    # make route for my
 
     @app.errorhandler(404)
     def page_not_found(error):

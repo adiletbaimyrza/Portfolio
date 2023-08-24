@@ -1,4 +1,4 @@
-{% from "macros/svgs.html" import moon, sun, new_tab, dropdown, menu, dropup %}
+{% from "macros/svgs.html" import moon, sun, new_tab, menu %}
 
 <!DOCTYPE html>
 <html lang="en" class="{{ 'dark-mode' if session.get('theme') == 'dark' }}">
@@ -78,17 +78,12 @@
             </a>
             {% endif %}
             <div class="dropdown">
-                <button id="resume-button" class="navigation-item button dropbtn" onclick="dropDown()">
+                <button class="navigation-item button dropbtn" onclick="dropDown()">
                     Resume
-                    {% if is_up %}
-                        {{ dropdown('navigation-icon dropdown-icon') }}
-                    {% else %}
-                        {{ dropup('navigation-icon dropup-icon') }}
-                    {% endif %}
                 </button>
                 <div id="myDropdown" class="dropdown-content">
                     <a id="preview" class="dropdown-link" href="{{ url_for('static', filename='docs/adilet-baimyrza-resume.pdf') }}"
-                        target="_blank">Quick View</a>
+                        target="_blank">Quick view</a>
                     <a id="download" class="dropdown-link" href="{{ url_for('static', filename='docs/adilet-baimyrza-resume.pdf') }}"
                         download>Download</a>
                 </div>
@@ -111,17 +106,7 @@
                             }
                         }
                     }
-                }
-
-                const resumeButton = document.getElementsByClassName('resume-button');
-
-                resumeButton.addEventListener('click', () => {
-                    {% if is_up %}
-                        {% set is_up = False %}
-                    {% else %}
-                        {% set is_up = True %}
-                    {% endif %}
-                });
+                } 
             </script>
 
             <a class="navigation-item" href="https://github.com/AdiletBaimyrza" target="_blank">
