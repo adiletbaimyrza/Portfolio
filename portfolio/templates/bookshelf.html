@@ -3,40 +3,44 @@
 {% from "macros/footer.html" import footer %}
 
 {% block head_content %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bookshelf.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bookshelf.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
 {% endblock head_content %}
 
 {% block content %}
-    <h1 id="bookshelf-main-head">Bookshelf</h1>
-    <div id="bookshelf-info">
-        <p id="text-info">
-            This page lists the books I have read since I bought an Amazon Reader on August 17, 2022.
-            Some of the books will have links to posts containing my retrospective thoughts on them.
-        </p>
-    </div>
-    <h2 class="bookshelf-header">2023</h2>
-    <div class="yearly-bookshelf-con">
-        <p class="list-item">Man's Search for Meaning - Viktor E. Frankl</p>
-        <p class="list-item">Deep Work: Rules for Focused Success in a Distracted World - Cal Newport</p>
-        <p class="list-item">Mother of God: An Extraordinary Journey into the Uncharted Tributaries of the Western Amazon - Paul Rosolie</p>
-        <p class="list-item">The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career - Reid Hoffman</p>
-        <p class="list-item">Sapiens: A Bried History of Humankind - Yuval Noah Harari</p>
-        <p class="list-item">Homo Deus: A Brief History of Tomorrow - Yuval Noah Harari</p>
-        <p class="list-item">Can't Hurt Me: Master Your Mind and Defy the Odds - David Goggins</p>
-        <p class="list-item">Never Finished: Unshackle Your Mind and Win the War within - David Goggins</p>
-        <p class="list-item">Quiet: The Power of Introverts in a World That Can't Stop Talking - Susan Cain</p>
-        <p class="list-item">The Subtle Art of Not Giviing a F*ck - Mark Manson</p>
-        <p class="list-item">The Easy Way to Lose Weight - Allen Carr</p>
-    </div>
-    <h2 class="bookshelf-header">2022</h2>
-    <div class="yearly-bookshelf-con">
-        <p class="list-item">The Unseen Body. A Doctor's Journey Through the Hidden Wonders of Human Anatomy - Johnathan Reisman</p>
-        <p class="list-item">The Why Cafe - John Strelecky (Russian Version)</p>
-        <p class="list-item">The Defining Decade: Why Your Twenties Matter - meg Jay (Russian Version)</p>
-        <p class="list-item">The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness - Morgan Housel</p>
-        <p class="list-item">Allen Carr's Easy Way to Stop Smoking: Be a happy Non-Smoker for the Rest of Your Life - Allen Carr</p>
-    </div>
+<h1 id="bookshelf-main-head">Bookshelf</h1>
+<div id="bookshelf-info">
+    <p id="text-info">
+        This page lists the books I have read since I bought an Amazon Reader on August 17, 2022.
+        Some of the books will have links to posts containing my retrospective thoughts on them.
+    </p>
+</div>
+<h2 class="bookshelf-header">2023</h2>
+<div class="yearly-bookshelf-con">
+    <p class="list-item">Man's Search for Meaning - Viktor E. Frankl</p>
+    <p class="list-item">Deep Work: Rules for Focused Success in a Distracted World - Cal Newport</p>
+    <p class="list-item">Mother of God: An Extraordinary Journey into the Uncharted Tributaries of the Western Amazon -
+        Paul Rosolie</p>
+    <p class="list-item">The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career - Reid
+        Hoffman</p>
+    <p class="list-item">Sapiens: A Brief History of Humankind - Yuval Noah Harari</p>
+    <p class="list-item">Homo Deus: A Brief History of Tomorrow - Yuval Noah Harari</p>
+    <p class="list-item">Can't Hurt Me: Master Your Mind and Defy the Odds - David Goggins</p>
+    <p class="list-item">Never Finished: Unshackle Your Mind and Win the War within - David Goggins</p>
+    <p class="list-item">Quiet: The Power of Introverts in a World That Can't Stop Talking - Susan Cain</p>
+    <p class="list-item">The Subtle Art of Not Giviing a F*ck - Mark Manson</p>
+    <p class="list-item">The Easy Way to Lose Weight - Allen Carr</p>
+</div>
+<h2 class="bookshelf-header">2022</h2>
+<div class="yearly-bookshelf-con">
+    <p class="list-item">The Unseen Body. A Doctor's Journey Through the Hidden Wonders of Human Anatomy - Johnathan
+        Reisman</p>
+    <p class="list-item">The Why Cafe - John Strelecky (Russian Version)</p>
+    <p class="list-item">The Defining Decade: Why Your Twenties Matter - meg Jay (Russian Version)</p>
+    <p class="list-item">The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness - Morgan Housel</p>
+    <p class="list-item">Allen Carr's Easy Way to Stop Smoking: Be a happy Non-Smoker for the Rest of Your Life - Allen
+        Carr</p>
+</div>
 
-    {{ footer() }}
+{{ footer() }}
 {% endblock content %}
